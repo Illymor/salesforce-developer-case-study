@@ -4,7 +4,7 @@
 
 ## Conception
 
-## Installation du code
+## Installation
 
 ## Améliorations & version future
 
