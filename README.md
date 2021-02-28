@@ -6,5 +6,5 @@
 
 ## Installation du code
 
-## Future version
+## Améliorations & version future
 
