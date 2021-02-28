@@ -1,4 +1,10 @@
 # Salesforce Developer Case Study
 
-## Ce qui a été fait 
+## Introduction
+
+## Conception
+
+## Installation du code
+
+## Future version
 
