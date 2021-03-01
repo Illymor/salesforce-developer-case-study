@@ -1,8 +1,8 @@
 # Salesforce Developer Case Study
 Sommaire
-* [introduction](https://github.com/Illymor/salesforce-developer-case-study#introduction)
-* [conception](https://github.com/Illymor/salesforce-developer-case-study#conception)
-* [installation](https://github.com/Illymor/salesforce-developer-case-study#installation)
+* [Introduction](https://github.com/Illymor/salesforce-developer-case-study#introduction)
+* [Conception](https://github.com/Illymor/salesforce-developer-case-study#conception)
+* [Installation](https://github.com/Illymor/salesforce-developer-case-study#installation)
 * [Améliorations & version future](https://github.com/Illymor/salesforce-developer-case-study#am%C3%A9liorations--version-future)
 
 
