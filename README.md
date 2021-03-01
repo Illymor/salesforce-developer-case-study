@@ -17,6 +17,8 @@ Sur la page d'un compte, le composant utilise la ville (BillingCity) et le code 
 
 Sur une page d'accueil, la géolocalisation de l'utilisateur connecté est déterminée uniquement si l'utilisateur a autorisé le navigateur a communiqué sa position. Une message d'erreur s'affichera dans le cas contraire (voir ci-dessous).
 
+Des illustrations sont présentes dans le dossier "docs".
+
 Une gestion simple des éventuelles erreurs à été mise en place et affiche un message d'erreur à la place du bulletin météo :
 * erreur lors de l'appel de l'API 
 * impossibilité de déterminer la géolocalisation de l'utilisateur ou du compte (ville & code postal incorrects par exemple)
