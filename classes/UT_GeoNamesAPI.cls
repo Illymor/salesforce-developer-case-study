@@ -17,6 +17,24 @@ public with sharing class UT_GeoNamesAPI {
         account.BillingCity = 'NANTES';
         account.BillingPostalCode = '44000';
         insert account;
+
+        List<Contact> contacts = new List<Contact>();
+
+        Contact contact1 = new Contact();
+        contact1.FirstName = 'Contact';
+        contact1.LastName = 'Test 1';
+        contact1.Email = 'email1@test.com';
+        contact1.AccountId = account.Id;
+        contacts.add( contact1 );
+
+        Contact contact2 = new Contact();
+        contact2.FirstName = 'Contact';
+        contact2.LastName = 'Test 2';
+        contact2.Email = 'email2@test.com';
+        contact2.AccountId = account.Id;
+        contacts.add( contact2 );
+
+        insert contacts;
     }
 
     /*
@@ -53,5 +71,23 @@ public with sharing class UT_GeoNamesAPI {
 
         System.assert(address.latitude == '47.21654');
         System.assert(address.longitude == '-1.55062');
+    }
+
+    /*
+     * Test 3 / Email sending
+     */
+    @isTest
+    public static void testEmailSendingToContacts(){
+        Account account = [select Id from Account where Name = 'Account Test 1'];
+
+        Test.startTest();
+        
+        Test.setMock(HttpCalloutMock.class, new UT_GeoNamesAPIMock());
+        AU_GeoNamesWeatherObservation weatherObservation = AW_WeatherInformationsAPI.getWeatherInformations('47.21654', '-1.55062');
+        Integer counter = AW_WeatherInformationsAPI.sendWeatherReport(weatherObservation, account.Id);
+
+        Test.stopTest();
+
+        System.assert(counter == 2);
     }
 }
