@@ -49,8 +49,8 @@ Le rapport météo se chargera automatiquement après un court délai.
 ![schema](https://github.com/Illymor/salesforce-developer-case-study/blob/main/docs/illustration-installation.png?raw=true)
 
 Afin de visualiser la date d'envoi du rapport (sur un compte et/ou un utilisateur), il est possible d'affecter les layouts suivants aux profils souhaités : 
-* SDCS User Layout
-* SDCS Account Layout
+* pour les utilisateurs : SDCS User Layout
+* pour les comptes : SDCS Account Layout
 
 ## Améliorations & version future
 Plusieurs points n'ont pas été traités et pourraient être améliorés dans une v2, notamment : 
