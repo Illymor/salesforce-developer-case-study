@@ -1,5 +1,11 @@
 # Salesforce Developer Case Study
 
+[introduction](https://github.com/Illymor/salesforce-developer-case-study#introduction)
+[conception](https://github.com/Illymor/salesforce-developer-case-study#conception)
+[installation](https://github.com/Illymor/salesforce-developer-case-study#installation)
+[Améliorations & version future](https://github.com/Illymor/salesforce-developer-case-study#am%C3%A9liorations--version-future)
+
+
 ## Introduction
 Les élements suivants ont été développés : 
 * création d'un composant affichant la météo sur la page d'un compte (selon le code postal et la ville du compte) ou en page d'accueil (selon le géolocalisation de l'utilisateur connecté)
