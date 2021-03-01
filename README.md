@@ -52,6 +52,7 @@ Afin de visualiser la date d'envoi du rapport (sur un compte et/ou un utilisateu
 
 ## Améliorations & version future
 Plusieurs points n'ont pas été traités et pourraient être améliorés dans une v2, notamment : 
+* rendre le composant disponible dans une page Web hors Salesforce (Lightning Out)
 * utiliser un process standard pour l'envoi des emails (création d'un template d'email, d'alertes emails et envoi par Process Builder), pour faciliter la maintenance
 * améliorer/détailler la gestion des erreurs ( aucun contact n'est rattaché au compte pour lequel on envoie l'email, timeout suite à l'appel API ...)
 * afficher un spinner de chargement le temps que le bulletin météo se charge
