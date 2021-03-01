@@ -46,6 +46,8 @@ L'installation dans une org. Salesforce se fait via l'installation d'un package 
 Une fois le package installé, il suffit d'ajouter le composant nommé "Weather Observation" sur la page Lightning d'un compte et/ou sur une page d'accueil.
 Le rapport météo se chargera automatiquement après un court délai.
 
+![schema](https://github.com/Illymor/salesforce-developer-case-study/blob/main/docs/illustration-installation.png?raw=true)
+
 Afin de visualiser la date d'envoi du rapport (sur un compte et/ou un utilisateur), il est possible d'affecter les layouts suivants aux profils souhaités : 
 * SDCS User Layout
 * SDCS Account Layout
