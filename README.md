@@ -9,9 +9,9 @@ Sommaire
 ## Introduction
 Les élements suivants ont été développés : 
 * création d'un composant affichant la météo sur la page d'un compte (selon le code postal et la ville du compte) ou en page d'accueil (selon le géolocalisation de l'utilisateur connecté)
-* le composant affiche la température (en degré Celcius), la vitesse du vent (en Noeuds), l'humidité (en %) et un icône décrivant la tendance actuelle (soleil, pluie, nuage, brouillard ou neige)
-* un bouton permet l'envoi du bulletin météo aux contacts liés au compte (et possédant un email valide) ou à l'utilisateur connecté, selon le contexte d'utilisateur du composant
-* lors de l'envoi de l'email, la date d'envoi est mise à jour sur le compte ou sur l'utilisateur, selon le contexte d'utilisateur du composant (champ "Last Weather Report Send Date")
+* le composant affiche la température (en degré Celsius), la vitesse du vent (en Noeuds), l'humidité (en %) et un icône décrivant la tendance actuelle (soleil, pluie, nuage, brouillard ou neige)
+* un bouton permet l'envoi du bulletin météo aux contacts liés au compte (et possédant un email valide) ou à l'utilisateur connecté, selon le contexte d'utilisation du composant
+* lors de l'envoi de l'email, la date d'envoi est mise à jour sur le compte ou sur l'utilisateur, selon le contexte d'utilisation du composant (champ "Last Weather Report Send Date")
 
 Sur la page d'un compte, le composant utilise la ville (BillingCity) et le code postal (BillingPostalCode) afin de déterminer la géolocalisation exacte (latitude et longitude) du compte, la ville seule ne suffisant pas via l'API GeoNames. Si cette adresse est modifiée, la page doit être actualisée manuellement pour que le bulletin météo se mette à jour.
 
@@ -49,7 +49,7 @@ Le rapport météo se chargera automatiquement après un court délai.
 
 ![schema](https://github.com/Illymor/salesforce-developer-case-study/blob/main/docs/illustration-installation.png?raw=true)
 
-Afin de visualiser la date d'envoi du rapport (sur un compte et/ou un utilisateur), il est possible d'affecter les layouts suivants aux profils souhaités : 
+Afin de visualiser la date d'envoi du bulletin (sur un compte et/ou un utilisateur), il est possible d'affecter les layouts suivants aux profils souhaités : 
 * pour les utilisateurs : SDCS User Layout
 * pour les comptes : SDCS Account Layout
 
@@ -59,7 +59,7 @@ Plusieurs points n'ont pas été traités et pourraient être améliorés dans u
 * utiliser un process standard pour l'envoi des emails (création d'un template d'email, d'alertes emails et envoi par Process Builder), pour faciliter la maintenance
 * améliorer/détailler la gestion des erreurs ( aucun contact n'est rattaché au compte pour lequel on envoie l'email, timeout suite à l'appel API ...)
 * afficher un spinner de chargement le temps que le bulletin météo se charge
-* gérer la langue et les unités (degré Farenheit ...)
+* gérer la langue et les unités (degré Fahrenheit ...)
 * améliorer la couverture et les cas de tests autos APEX
 * utiliser des Custom Labels pour l'affichage des textes et messages sur le composant
 * permettre au composant de se rafraichir automatiquement en cas de changement de l'adresse du compte par exemple
