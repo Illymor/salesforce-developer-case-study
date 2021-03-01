@@ -40,8 +40,9 @@ Le nommage (préfixe) des développements se base sur la règle suivante :
 ## Installation
 
 ### Lien d'installation du package
-L'installation dans une org. Salesforce se fait via l'installation d'un package non géré ("unmanaged package"). Le lien d'installation du package est : 
-
+L'installation dans une org. Salesforce se fait via l'installation d'un package non géré ("unmanaged package"). 
+Le lien d'installation du package est : https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1v0000028Qrr
+  
 ### Actions post-installations
 Une fois le package installé, il suffit d'ajouter le composant nommé "Weather Observation" sur la page Lightning d'un compte et/ou sur une page d'accueil.
 Le rapport météo se chargera automatiquement après un court délai.
