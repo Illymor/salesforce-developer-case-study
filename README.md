@@ -47,7 +47,9 @@ Afin de visualiser la date d'envoi du rapport (sur un compte et/ou un utilisateu
 ## Améliorations & version future
 Plusieurs points n'ont pas été traités et pourraient être améliorés dans une v2, notamment : 
 * utiliser un process standard pour l'envoi des emails (création d'un template d'email, d'alertes emails et envoi par Process Builder), pour faciliter la maintenance
-* améliorer/détailler la gestion des erreurs (ex : si aucun contact n'est rattaché au compte pour lequel on envoie l'email)
+* améliorer/détailler la gestion des erreurs ( aucun contact n'est rattaché au compte pour lequel on envoie l'email, timeout suite à l'appel API ...)
 * afficher un spinner de chargement le temps que le bulletin météo se charge
 * gérer la langue et les unités (degré Farenheit ...)
 * améliorer la couverture et les cas de tests autos APEX
+* utiliser des Custom Labels pour l'affichage des textes et messages sur le composant
+* permettre au composant de se rafraichir automatiquement en cas de changement de l'adresse du compte par exemple
