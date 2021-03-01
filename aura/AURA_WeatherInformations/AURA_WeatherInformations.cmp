@@ -1,0 +1,64 @@
+<aura:component controller="AW_WeatherInformationsAPI" implements="flexipage:availableForAllPageTypes,force:hasRecordId">
+
+    <!-- attributes -->
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="latitude" type="String" default="" />
+    <aura:attribute name="longitude" type="String" default="" />
+    <aura:attribute name="weather" type="Object" default="{}" />
+    <aura:attribute name="errorMessage" type="String" />
+
+    <!-- handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <div>
+        <lightning:card>
+            <lightning:layout multipleRows="true">
+
+                <!-- title -->
+                <lightning:layoutItem size="6" padding="around-small">
+                    <div class="slds-text-heading_medium">Weather Observation</div>
+                </lightning:layoutItem>
+
+                <!-- button to send email -->
+                <lightning:layoutItem size="6" padding="around-small">
+                    <lightning:button variant="brand" label="Send by email" class="{!empty(v.errorMessage) ? '' : 'hidden'}"
+                        title="Send by email" onclick="{!c.onClickSendEmailsButton}"/>
+                </lightning:layoutItem>
+
+                <aura:if isTrue="{!empty(v.errorMessage)}">
+                    <!-- (no error) -->
+
+                    <!-- weather details -->
+                    <lightning:layoutItem size="6" padding="around-small">
+                        <ul>
+                            <li>Temperature : {!v.weather.temperature}</li>
+                            <li>Humidity : {!v.weather.humidity}</li>
+                            <li>Wind speed : {!v.weather.windSpeed}</li>
+                        </ul>
+                    </lightning:layoutItem>
+
+                    <!-- weather icon -->
+                    <lightning:layoutItem size="6" padding="around-small">
+                        <aura:if isTrue="{!not(empty(v.weather.icon))}">
+                            <img src="{!$Resource.WeatherIcons + '/' + v.weather.icon + '.png'}" alt="{!v.weather.icon}" title="{!v.weather.icon}" />
+                        </aura:if>
+                    </lightning:layoutItem>
+
+                <aura:set attribute="else">
+                    <!-- (error) -->
+
+                    <!-- error message -->
+                    <lightning:layoutItem size="12" padding="around-small">
+                        <div class="slds-text-color_error">
+                            {!v.errorMessage}
+                        </div>
+                    </lightning:layoutItem>
+                    
+                </aura:set>
+            </aura:if>
+
+            </lightning:layout>
+        </lightning:card>
+    </div>
+
+</aura:component>
